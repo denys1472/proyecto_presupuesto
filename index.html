@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto de Construcción</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Presupuesto</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ítem</th>
+                    <th>Descripción</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="items">
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" class="description"></td>
+                    <td><input type="number" class="quantity" min="0" step="1" value="0"></td>
+                    <td><input type="number" class="unit-price" min="0" step="0.01" value="0"></td>
+                    <td class="item-total">Q0.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="add-item">Agregar ítem</button>
+        <div class="summary">
+            <h2>Resumen</h2>
+            <p>Subtotal: <span id="subtotal">Q0.00</span></p>
+            <p>IVA (12%): <span id="tax">Q0.00</span></p>
+            <p>Total: <span id="total">Q0.00</span></p>
+        </div>
+        <button id="generate-pdf">Generar PDF</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
