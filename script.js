@@ -43,4 +43,4 @@ function addItem() {
         <td>${rowCount}</td>
         <td><input type="text" class="description"></td>
         <td><input type="number" class="quantity" min="0" step="1" value="0"></td>
-        <td><input type="
+        <td><input type=""></td> ` }
