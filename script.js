@@ -43,4 +43,21 @@ function addItem() {
         <td>${rowCount}</td>
         <td><input type="text" class="description"></td>
         <td><input type="number" class="quantity" min="0" step="1" value="0"></td>
-        <td><input type=""></td> ` }
+        <td><input type="number" class="unit-price" min="0" step="0.01" value="0"></td>
+        <td class="item-total">Q0.00</td>
+    `;
+
+    // Agregar los eventos de cambio en los inputs
+    newRow.querySelector('.quantity').addEventListener('input', calculateRowTotal);
+    newRow.querySelector('.unit-price').addEventListener('input', calculateRowTotal);
+
+    itemsContainer.appendChild(newRow);
+}
+
+// Evento para agregar un ítem
+addItemButton.addEventListener('click', addItem);
+
+// Evento para calcular el total al iniciar
+document.querySelectorAll('.quantity, .unit-price').forEach(input => {
+    input.addEventListener('input', calculateRowTotal);
+});
